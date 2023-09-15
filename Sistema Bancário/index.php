@@ -1,6 +1,9 @@
 <?php
 
 $accounts = [];
+/**
+ * @return void
+ */
 function init()
 {
     echo "Bem vindo ao assistente de criação de contas" . PHP_EOL;
@@ -9,11 +12,18 @@ function init()
     sleep(1);
 }
 
+/**
+ * @param $text
+ * @return void
+ */
 function say($text)
 {
     echo $text . PHP_EOL;
 }
 
+/**
+ * @return void
+ */
 function createAccount()
 {
     say('Digite o nome do titular:');
@@ -31,18 +41,24 @@ function createAccount()
     sleep(2);
 }
 
+/**
+ * @return void
+ */
 function showAccounts()
 {
-    if(count($GLOBALS['accounts'])) {
+    if (count($GLOBALS['accounts'])) {
         var_dump($GLOBALS['accounts']);
     }
 
-    if(!count($GLOBALS['accounts'])) {
+    if (!count($GLOBALS['accounts'])) {
         say('Não existem contas cadastradas');
     }
 
 }
 
+/**
+ * @return void
+ */
 function deleteAccount()
 {
 
